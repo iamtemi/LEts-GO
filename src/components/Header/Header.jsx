@@ -9,17 +9,13 @@ export default function Header() {
         <div className="mainbar__wrapper">
           <div className="mainbar__wrapper--navigation">
             <nav aria-label="Main Navigation" className="mainbar__navigation">
-              <a
-                href="https://lego.com"
-                aria-label="Lego"
-                className="mainbar__logo"
-              >
+              <Link to="/" aria-label="Lego" className="mainbar__logo">
                 <img
                   src={legoLogo}
                   alt="LEGO Logo"
                   className="mainbar__logo--img"
                 />
-              </a>
+              </Link>
               <ul className="mainbar__menu">
                 <li className="mainbar__menuitem">SHOP</li>
                 <li className="mainbar__menuitem">DISCOVER</li>

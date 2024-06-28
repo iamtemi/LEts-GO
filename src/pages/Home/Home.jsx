@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import GlobalBackground from "../../components/GlobalBackground/GlobalBackground";
 import "./Home.scss";
 
@@ -12,9 +13,9 @@ export default function Home() {
         <span className="headline__text--var5">gift</span>
       </h1>
 
-      <button type="button" className="headline__button">
+      <Link to="/gift-finder" className="headline__button">
         Launch the Gift Finder
-      </button>
+      </Link>
     </div>
   );
 

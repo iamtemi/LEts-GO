@@ -1,0 +1,72 @@
+@use "../../styles/partials/colors" as *;
+
+.ageselect {
+  width: 100%;
+  height: 100%;
+}
+
+.selectage {
+  padding: 1.5rem;
+  text-align: center;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+  }
+
+  &__image {
+    width: 12.5rem;
+  }
+
+  &__button {
+    &-wrapper {
+      display: flex;
+      gap: 1rem;
+    }
+
+    &-age {
+      border-radius: 999px;
+      padding: 0.5rem 1rem;
+      border: 2px solid $lego-blue;
+
+      &--active {
+        background-color: $lego-blue;
+        color: $white;
+      }
+
+      &:hover {
+        background-color: $lego-blue;
+        color: $white;
+      }
+
+      &:active {
+        background-color: $lego-blue;
+        color: $white;
+      }
+    }
+
+    &-next {
+      background-color: $lego-blue;
+      color: $white;
+      padding: 0.75rem 1.25rem;
+      font-weight: 500;
+      border-radius: 10rem;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($lego-blue, 10%);
+      }
+    }
+  }
+}

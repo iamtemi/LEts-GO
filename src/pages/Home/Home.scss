@@ -1,9 +1,28 @@
 @use "../../styles/partials/colors" as *;
 
-.headline {
+.hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   &__wrapper {
-    width: 66%;
+    width: 100%;
     text-align: center;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    background-size: 10%;
+    background-image: url("../../assets/images/green-brick.png"),
+      url("../../assets/images/red-brick.png"),
+      url("../../assets/images/yellow-brick.png");
+    background-repeat: no-repeat;
+    background-position-x: 0px, 100%, 100%;
+    background-position-y: 20px, 32px, 100%;
+  }
+
+  &__container {
+    width: 55%;
   }
 
   &__text {
@@ -11,6 +30,9 @@
     font-family: "Typewell";
     font-size: 4rem;
     margin-bottom: 3.5rem;
+    width: 90%;
+    display: flexbox;
+    justify-content: center;
 
     &--var1 {
       color: $lego-blue;
@@ -41,5 +63,9 @@
     &:hover {
       background-color: darken($lego-blue, 10%);
     }
+  }
+
+  &__cards {
+    width: 100%;
   }
 }

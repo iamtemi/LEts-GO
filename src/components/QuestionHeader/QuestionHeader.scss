@@ -2,8 +2,9 @@
 
 .questionheader {
   padding: 1rem 2rem;
-  position: relative;
-  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 
   &__wrapper {
     display: flex;
@@ -22,12 +23,13 @@
     gap: 0.75rem;
     border: 2px solid $lego-blue;
 
-    &__text {
+    &--text {
       font-weight: 500;
     }
 
-    &__icon {
+    &--icon {
       width: 0.75rem;
+      border-radius: 0.5rem
     }
   }
 

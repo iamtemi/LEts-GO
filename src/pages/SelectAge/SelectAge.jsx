@@ -18,9 +18,7 @@ export default function SelectAge() {
   const body = (
     <section className="ageselect">
       <div className="selectage">
-        <h2 className="selectage__title">Let's get started</h2>
         <div className="selectage__content">
-          <p className="selectage__subtitle">How old are they?</p>
           <img src={minifig} alt="minifig" className="selectage__image" />
           <div className="selectage__button-wrapper">
             {ages.map((age) => (
@@ -46,12 +44,21 @@ export default function SelectAge() {
     </section>
   );
 
+  const middleText = (
+    <div className="selecttheme__header">
+      <h2 className="selecttheme__title">Let's get started</h2>
+      <p className="selecttheme__desc">How old are they?</p>
+    </div>
+  );
+
   return (
     <>
       <QuestionHeader
         BackLink={routes.home}
         NextLink={routes.parentOrChild}
         showNext={true}
+        showBack={true}
+        MiddleText={middleText}
       />
       <GlobalBackground body={body} fullHeight={true} />;
     </>

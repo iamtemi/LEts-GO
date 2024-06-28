@@ -43,6 +43,7 @@ export default function ParentOrChild() {
       <QuestionHeader
         BackLink={routes.selectAge}
         NextLink={routes.home}
+        showBack={true}
         showNext={false}
       />
       <GlobalBackground body={body} />;

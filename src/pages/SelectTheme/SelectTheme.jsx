@@ -9,29 +9,42 @@ import CategorySelector from "../../components/CategorySelector/CategorySelector
 import "./SelectTheme.scss";
 import QuestionHeader from "../../components/QuestionHeader/QuestionHeader";
 import routes from "../../utils/routes";
+import GlobalBackground from "../../components/GlobalBackground/GlobalBackground";
 
 export default function SelectTheme() {
   const images = [
-    themeImg1,
-    themeImg2,
-    themeImg3,
-    themeImg4,
-    themeImg5,
-    themeImg6,
+    { image: themeImg1, description: "Entertainment" },
+    { image: themeImg2, description: "Arts" },
+    { image: themeImg3, description: "Fantasy & Heroes" },
+    { image: themeImg4, description: "Animals & Plants" },
+    { image: themeImg5, description: "Cities" },
+    { image: themeImg6, description: "Activities" },
   ];
 
+  const body = (
+    <CategorySelector
+      images={images}
+      buttonText={"Next question"}
+      buttonLink={routes.theme2}
+    />
+  );
+
+  const middleText = (
+    <div className="selecttheme__header">
+      <h2 className="selecttheme__title">Hello!</h2>
+      <p className="selecttheme__desc">What do you like?</p>
+    </div>
+  );
   return (
     <>
       <QuestionHeader
-        BackLink={routes.parentOrChild}
+        BackLink={routes.home}
         NextLink={routes.theme2}
+        showBack={true}
         showNext={true}
+        MiddleText={middleText}
       />
-      <div className="selecttheme__header">
-        <h2 className="selecttheme__title">Hello!</h2>
-        <p className="selecttheme__desc">What do you like?</p>
-      </div>
-      <CategorySelector images={images} />;
+      <GlobalBackground body={body} fullHeight={true} />;
     </>
   );
 }

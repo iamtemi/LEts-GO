@@ -1,5 +1,6 @@
 import GlobalBackground from "../../components/GlobalBackground/GlobalBackground";
 import QuestionHeader from "../../components/QuestionHeader/QuestionHeader";
+import routes from "../../utils/routes";
 import "./ComingSoon.scss";
 
 export default function ComingSoon() {
@@ -13,7 +14,7 @@ export default function ComingSoon() {
   );
   return (
     <>
-      <QuestionHeader />
+      <QuestionHeader BackLink={routes.home} />
       <GlobalBackground body={body} />;
     </>
   );

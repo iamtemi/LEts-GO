@@ -8,6 +8,9 @@ import routes from "./utils/routes";
 import SelectTheme from "./pages/SelectTheme/SelectTheme";
 import SelectTheme2 from "./pages/SelectTheme2/SelectTheme2";
 import ComingSoon from "./pages/ComingSoon/ComingSoon";
+import Model from "./pages/Model/Model";
+import FormComplete from "./pages/FormComplete/FormComplete";
+import Recommendations from "./pages/Recommendations/Recommendations";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
         <Route path={routes.theme} element={<SelectTheme />} />
         <Route path={routes.theme2} element={<SelectTheme2 />} />
         <Route path={routes.comingSoon} element={<ComingSoon />} />
+        <Route path={routes.model} element={<Model />} />
+        <Route path={routes.complete} element={<FormComplete />} />
+        <Route path={routes.recommendations} element={<Recommendations />} />
       </Routes>
     </BrowserRouter>
   );

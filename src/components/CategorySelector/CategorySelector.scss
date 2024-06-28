@@ -1,22 +1,38 @@
 @use "../../styles/partials/colors" as *;
 
 .category {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
-  padding: 6rem;
+  text-align: center;
 
-  &__image {
-    padding: 1.5rem;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3rem 6rem;
+  }
+
+  &__card {
     text-align: center;
     width: calc(33.333% - 3rem);
-    flex: 1;
+    height: 18.75rem;
     border: 3px solid transparent;
     border-radius: 0.25rem;
+    padding: 0.5rem;
+    background-color: transparent;
 
     &--selected {
       border: 3px solid $lego-green;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1) translateY(-10px);
     }
   }
 }

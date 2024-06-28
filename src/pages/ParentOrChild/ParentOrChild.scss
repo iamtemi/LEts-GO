@@ -1,0 +1,52 @@
+@use "../../styles/partials/colors" as *;
+
+.parentorchild {
+  display: flex;
+  justify-content: center;
+  max-width: 66.666%;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  &__child,
+  &__parent {
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+  }
+
+  &__span {
+    display: block;
+
+    &--desc {
+      display: block;
+      padding: 1rem 0;
+    }
+  }
+
+  &__child {
+    background-color: $lego-light-pink;
+    align-items: flex-start;
+  }
+
+  &__parent {
+    background-color: $lego-yellow;
+    text-align: center;
+  }
+
+  &__description {
+    width: 90%;
+  }
+
+  &__button {
+    display: inline-block;
+    align-self: center;
+  }
+}

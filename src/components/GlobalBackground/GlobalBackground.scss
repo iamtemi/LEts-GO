@@ -3,14 +3,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     background-size: 10%;
-    background-image: url("../../assets/images/green-brick.png"),
+    background-image: url("../../assets/images/back"),
       url("../../assets/images/mag-glass.png"),
       url("../../assets/images/red-brick.png"),
       url("../../assets/images/yellow-brick.png");
     background-repeat: no-repeat;
     background-position-x: 0px, 100%, 20px, 100%;
     background-position-y: 20px, 32px, 100%, 100%;
+
+    &2 {
+      height: calc(100vh - 12rem);
+    }
   }
 }

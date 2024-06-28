@@ -6,3 +6,16 @@
 body {
   font-family: "Cera Pro", sans-serif;
 }
+
+.button {
+  background-color: $lego-blue;
+  color: $white;
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  border-radius: 10rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($lego-blue, 10%);
+  }
+}

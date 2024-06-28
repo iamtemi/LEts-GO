@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import GlobalBackground from "../../components/GlobalBackground/GlobalBackground";
 import "./Home.scss";
+import routes from "../../utils/routes";
 
 export default function Home() {
   const body = (
@@ -13,11 +14,11 @@ export default function Home() {
         <span className="headline__text--var5">gift</span>
       </h1>
 
-      <Link to="/gift-finder" className="headline__button">
+      <Link to={routes.selectAge} className="headline__button">
         Launch the Gift Finder
       </Link>
     </div>
   );
 
-  return <GlobalBackground body={body} />;
+  return <GlobalBackground body={body} fullHeight={false} />;
 }

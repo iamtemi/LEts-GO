@@ -2,10 +2,17 @@
 
 .questionheader {
   padding: 1rem 2rem;
+  position: relative;
+  z-index: 1;
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    :hover {
+      background-color: $lego-blue;
+      color: $white;
+    }
   }
 
   &__link {

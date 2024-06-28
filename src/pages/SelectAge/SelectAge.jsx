@@ -3,11 +3,13 @@ import QuestionHeader from "../../components/QuestionHeader/QuestionHeader";
 import minifig from "../../assets/images/minifig-01.png";
 import { useState } from "react";
 import GlobalBackground from "../../components/GlobalBackground/GlobalBackground";
+import { Link } from "react-router-dom";
+import routes from "../../utils/routes";
 
 export default function SelectAge() {
   const [selectedAge, setSelectedAge] = useState(null);
 
-  const ages = ["0 - 2", "3 - 5", "6 - 9", "10 - 12", "13 - 18", "18+"];
+  const ages = ["0 - 2", "3 - 6", "7 - 10", "11 - 17", "18+"];
 
   const handleAgeClick = (age) => {
     setSelectedAge(age);
@@ -33,7 +35,12 @@ export default function SelectAge() {
               </button>
             ))}
           </div>
-          <button className="selectage__button-next">Next question</button>
+          <Link
+            to={routes.parentOrChild}
+            className="button selectage__button-next"
+          >
+            Next question
+          </Link>
         </div>
       </div>
     </section>
@@ -41,8 +48,12 @@ export default function SelectAge() {
 
   return (
     <>
-      <QuestionHeader BackLink="/" NextLink="/" />
-      <GlobalBackground body={body} />;
+      <QuestionHeader
+        BackLink={routes.home}
+        NextLink={routes.parentOrChild}
+        showNext={true}
+      />
+      <GlobalBackground body={body} fullHeight={true} />;
     </>
   );
 }

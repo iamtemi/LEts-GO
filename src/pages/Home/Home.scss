@@ -1,0 +1,46 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+
+.headline {
+  &__wrapper {
+    width: 66%;
+    text-align: center;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-family: "Typewell";
+    font-size: 4rem;
+    margin-bottom: 3.5rem;
+
+    &--var1 {
+      color: $lego-blue;
+    }
+    &--var2 {
+      color: $lego-pink;
+    }
+    &--var3 {
+      color: $lego-green;
+    }
+    &--var4 {
+      color: $lego-purple;
+    }
+    &--var5 {
+      color: $lego-orange;
+    }
+  }
+
+  &__button {
+    background-color: $lego-blue;
+    color: $white;
+    padding: 0.75rem 1.25rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    border-radius: 10rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($lego-blue, 10%);
+    }
+  }
+}

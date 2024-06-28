@@ -1,0 +1,8 @@
+@use "./partials/mixins" as *;
+@use "./partials/resets" as *;
+@use "./partials/colors" as *;
+@use "./partials/typography" as *;
+
+body {
+  font-family: "Cera Pro", sans-serif;
+}

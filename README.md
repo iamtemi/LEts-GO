@@ -15,6 +15,12 @@ Welcome! This project was developed during a 24-hour hackathon by our team to ad
 
 ![LEts GO solution](./public/LEtsGO.png)
 
+## Installation
+Once the files are downloaded:
+```
+npm install
+npm run dev
+```
 ## Tech Stack
 
 Our application leverages the following technologies:
